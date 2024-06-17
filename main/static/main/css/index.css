@@ -1,0 +1,11 @@
+#catalog-btn { 
+    background-color: pink;
+    padding: 15px;
+    border: 0px;
+    border-radius: 100px;
+    box-shadow: 10px 8px 0px rgba(248, 172, 184, 0.5);
+}
+
+.carousel {
+    margin-bottom: 20px;
+}

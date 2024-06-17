@@ -1,12 +1,9 @@
-@import url(../../../../main/static/main/css/fonts.css);
-
 * {
-    font-family: "Montserrat Regular";
+    font-family: "Montserrat";
 }
 
 form {
     width: 560px;
-    /* border: 1px solid green; */
 }
 
 #main-wrapper {
@@ -17,9 +14,11 @@ form {
 
 .info-text {
     color: white;
+    margin: 0px;
+    font-weight: 800px;
 }
 
-#auth-title {
+#auth-block {
     display: flex;
     flex-direction: column;
 }
@@ -45,9 +44,6 @@ button {
     background-color: #FFCBCC;
 }
 
-.info-text {
-    margin: 0px;
-}
 a {
     margin: 0px;
 }
