@@ -28,3 +28,7 @@ authorize/__pycache__/backends.cpython-311.pyc
 authorize/__pycache__/models.cpython-311.pyc
 authorize/__pycache__/views.cpython-311.pyc
 authorize/migrations/__pycache__/__init__.cpython-311.pyc
+contacts/static/contacts/img/.DS_Store
+contacts/.DS_Store
+contacts/static/.DS_Store
+contacts/static/contacts/.DS_Store
