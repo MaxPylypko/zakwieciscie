@@ -1,4 +1,4 @@
-# Zakwieciscie онлайн-крамниця квітів
+# "Zakwieciscie" онлайн-крамниця квітів
 
 ## Опис проекту
 
@@ -71,7 +71,7 @@
 
 ---
 
-# Zakwieciscie online flower-store
+# "Zakwieciscie" online flower-store
 
 ## Project Description
 
