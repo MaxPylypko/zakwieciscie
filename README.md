@@ -1,4 +1,4 @@
-# Квітковий Інтернет Магазин
+# Zakwieciscie онлайн-крамниця квітів
 
 ## Опис проекту
 
@@ -71,7 +71,7 @@
 
 ---
 
-# Flower online store
+# Zakwieciscie online flower-store
 
 ## Project Description
 
