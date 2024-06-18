@@ -1,0 +1,184 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'catalog/css/catalog.css' %}">
+{% endblock %}
+
+{% block banner %}
+  <img src="{% static 'catalog/img/flowers_banner.png' %}" alt="Flowers catalog banner">
+{% endblock %}
+
+{% block content %}
+<!-- Filters seciton -->
+  <div id="filters">
+    <!-- Wrapper for corectly working space-between -->
+    <div id="filters-wrapper">
+      <!-- Colors -->
+      <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Colors</button>
+      <div class="dropdown">
+        <div class="dropdown-menu">
+          <div class="dropdown-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">White</label>
+            </div>
+          </div>
+
+          <div class="dropdown-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Pink</label>
+            </div>
+          </div>
+
+          <div class="dropdown-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Red</label>
+            </div>
+          </div>
+        </div>
+        <button id="apply-filter-btn">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="items">
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Flowers</h5>
+        <p class="card-text">Lorem ipsum</p>
+        <p class="price-text">15 zl</p>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

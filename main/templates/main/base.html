@@ -30,7 +30,7 @@
         <div class="d-flex align-items-center">
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-href text-white" href="{% url 'catalog' %}">Catalog</a>
+                    <a class="nav-href text-white" href="{% url 'flowers_catalog' %}">Catalog</a>
                 </li>
                 
                 <li class="nav-item">
@@ -62,6 +62,9 @@
     </div>
 
     {% block carousel %}
+    {% endblock %}
+
+    {% block banner %}
     {% endblock %}
 
     <div id="main-wrapper" class="h-100">

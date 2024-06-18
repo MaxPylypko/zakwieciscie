@@ -4,5 +4,5 @@ from django.shortcuts import render
 def item(request):
     return render(request, "catalog/item.html")
 
-def catalog(request):
-    return render(request, "catalog/catalog.html")
+def flowers_catalog(request):
+    return render(request, "catalog/flowers_catalog.html")
