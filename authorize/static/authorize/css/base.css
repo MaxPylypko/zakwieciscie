@@ -52,3 +52,9 @@ a {
     margin-top: 5px;
     color: red
 }
+
+#status-title {
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+}

@@ -4,19 +4,34 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: var(--font);
 }
 
-
-.nav-link {
-    font-family: var(--font);
-    font-size: 20px;
-    font-weight: 300;
-    margin-right: 5px;
+footer {
+    border-top: solid 0.5px rgba(255, 255, 255, 0.288);
 }
+
+.nav-href {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0 0 0 0;
+}
+
+.modal.fade.modal-right .modal-dialog {
+    transform: translate(125%, 0px);
+}
+  
+.modal.show.modal-right .modal-dialog {
+    transform: none;
+}
+
+
 
 .navbar-nav {
     margin-left: 10px;
@@ -54,4 +69,3 @@ body {
     margin-left: 5px;
     margin-right: 0px;
 }
-

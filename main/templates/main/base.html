@@ -23,26 +23,26 @@
 <body class="d-flex flex-column vh-100 align-items-center">
     <div id="header-content" class="navbar navbar-expand-lg d-flex justify-content-between">
 
+      <a href="{% url 'main' %}">
+          <img id="logo" src="{% static 'main/img/logo.png' %}" alt="Picture of logo">
+      </a>
+
         <div class="d-flex align-items-center">
-            <a href="{% url 'main' %}">
-                <img id="logo" src="{% static 'main/img/logo.png' %}" alt="Picture of logo">
-            </a>
-            
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'catalog' %}">Catalog</a>
+                    <a class="nav-href text-white" href="{% url 'catalog' %}">Catalog</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Reviews</a>
+                    <a class="nav-href text-white" href="#">Reviews</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'contacts' %}">Contacts</a>
+                    <a class="nav-href text-white" href="{% url 'contacts' %}">Contacts</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">FAQ</a>
+                    <a class="nav-href text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">FAQ</a>
                 </li>
             </ul>
         </div>
@@ -70,7 +70,7 @@
 
         <!-- MODAL OPEN -->
       <div class="modal fade modal-right" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered d-flex align-items-xxl-stretch modal-right" style="left: 34%;" style="transform: translate(125%, 0px)">
+        <div class="modal-dialog modal-dialog-centered d-flex align-items-xxl-stretch modal-right" style="left: 34%;">
           <div class="modal-content ">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
