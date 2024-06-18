@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'catalog/css/catalog.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="filters" class="d-inline-block h-100">
+      
+      <div id="price-range-wrapper" class="d-flex flex-column">
+        <label for="price-range" class="label">Price range</label>
+        <input type="range" class="form-range" min="0" max="1000" id="price-range"> 
+      </div>
+      
+      <div id="colors d-flex flex-column">
+        <label for="colors" class="label">Colors</label>
+        <div class="color-block d-flex justify-content-between">
+          <p>Color name</p>
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+        </div>
+
+        <div class="color-block d-flex justify-content-between">
+          <p>Color name</p>
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+        </div>
+
+        <div class="color-block d-flex justify-content-between">
+          <p>Color name</p>
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+        </div>
+
+        <div class="color-block d-flex justify-content-between">
+          <p>Color name</p>
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+        </div>
+
+        <div class="color-block d-flex justify-content-between">
+          <p>Color name</p>
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- <div id="items" class="d-flex flex-wrap h-100">
+        <div class="card">
+            <img class="card-img-top" src="{% static 'main/img/flowers.png' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> 
+          
+          <div class="card">
+            <img class="card-img-top" src="{% static 'main/img/flowers.png' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> 
+
+          <div class="card">
+            <img class="card-img-top" src="{% static 'main/img/flowers.png' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> 
+
+    </div> -->
+    
+    <div class="pagination"></div>
+
+{% endblock %}

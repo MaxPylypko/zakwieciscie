@@ -31,5 +31,5 @@ urlpatterns = [
     path("signup/", authorize.views.sign_up, name='signup'),
     path("login/", authorize.views.log_in, name='login'),
     
-    path("catalog/", catalog.views.item, name='catalog'),
+    path("catalog/", catalog.views.catalog, name='catalog'),
 ]
