@@ -51,10 +51,6 @@
 6. Створення макетів сторінок та графічних елементів.
 7. Наповнення сайту текстами, фото та відео.
 
-### Розробники
-- Ім'я Прізвище: реалізував функціонал каталогу, кошика та оформлення замовлення.
-- Ім'я Прізвище: розробив адміністративну панель і систему управління користувачами.
-
 ### Дизайнери
 - Гончаров Єгор/Honcharov Yehor і Киприч Таїсія/Kyprych Taisiia: створили візуальний дизайн сайту, включаючи макети сторінок та графічні елементи.
 
@@ -123,10 +119,6 @@ This project is a flower e-commerce store where users can browse, order, and pur
 5. Visual style and design of the site.
 6. Creation of page layouts and graphic elements.
 7. Content creation (texts, photos, and videos).
-
-### Developers
-- Name Surname: Implemented catalog, cart, and order functionality.
-- Name Surname: Developed the admin panel and user management system.
 
 ### Designers
 - Honcharov Yehor and Kyprych Taisiia: Created the visual design of the site, including page layouts and graphic elements.
