@@ -12,6 +12,3 @@ def cart(request: HttpRequest):
     except:
         return render(request, 'main/index.html')
     return render(request, "order/cart.html", {'cart_items': cart_items})
-
-# def favs(request: HttpRequest):
-#     return render("orders/favs.html")
