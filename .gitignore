@@ -1,34 +1,8 @@
 db.sqlite3
-zakwieciscie/__pycache__/__init__.cpython-311.pyc
-zakwieciscie/__pycache__/settings.cpython-311.pyc
-zakwieciscie/__pycache__/urls.cpython-311.pyc
-zakwieciscie/__pycache__/wsgi.cpython-311.pyc
-main/migrations/__pycache__/__init__.cpython-311.pyc
-contacts/migrations/__pycache__/__init__.cpython-311.pyc
-contacts/__pycache__/__init__.cpython-311.pyc
-contacts/__pycache__/admin.cpython-311.pyc
-contacts/__pycache__/apps.cpython-311.pyc
-contacts/__pycache__/models.cpython-311.pyc
-contacts/__pycache__/views.cpython-311.pyc
-main/__pycache__/__init__.cpython-311.pyc
-main/__pycache__/admin.cpython-311.pyc
-main/__pycache__/apps.cpython-311.pyc
-main/__pycache__/models.cpython-311.pyc
-main/__pycache__/views.cpython-311.pyc
-catalog/migrations/__pycache__/__init__.cpython-311.pyc
-catalog/__pycache__/__init__.cpython-311.pyc
-catalog/__pycache__/admin.cpython-311.pyc
-catalog/__pycache__/apps.cpython-311.pyc
-catalog/__pycache__/models.cpython-311.pyc
-catalog/__pycache__/views.cpython-311.pyc
-authorize/__pycache__/__init__.cpython-311.pyc
-authorize/__pycache__/admin.cpython-311.pyc
-authorize/__pycache__/apps.cpython-311.pyc
-authorize/__pycache__/backends.cpython-311.pyc
-authorize/__pycache__/models.cpython-311.pyc
-authorize/__pycache__/views.cpython-311.pyc
-authorize/migrations/__pycache__/__init__.cpython-311.pyc
-contacts/static/contacts/img/.DS_Store
-contacts/.DS_Store
-contacts/static/.DS_Store
-contacts/static/contacts/.DS_Store
+*.DS_Store
+# contacts/static/contacts/img/.DS_Store
+# contacts/.DS_Store
+# contacts/static/.DS_Store
+# contacts/static/contacts/.DS_Store
+media
+*.pyc

@@ -1,6 +1,6 @@
 :root {
     --font: "Montserrat";
-    --main-color: #1e1e1e;
+    --main-color: #1A1110;
 }
 
 * {
@@ -68,4 +68,14 @@ body {
 #auth-frame .icon {
     margin-left: 5px;
     margin-right: 0px;
+}
+
+#user-zone {
+    gap: 30px;
+}
+
+#icons-block {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
 }

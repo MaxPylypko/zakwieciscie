@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 import main.views
 import contacts.views
 import authorize.views
 import catalog.views
+import order.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +35,14 @@ urlpatterns = [
     path("login/", authorize.views.log_in, name='login'),
     
     path("flowers/", catalog.views.flowers_catalog, name='flowers_catalog'),
+    path("item/", catalog.views.item, name='item'),
+    path("add_to_cart/<int:item_id>", catalog.views.add_to_cart, name="add_to_cart"),
+    path("add_to_favs/<int:item_id>", catalog.views.add_to_favs, name="add_to_favs"),
+    
+    path("cart/", order.views.cart, name='cart')
+    # path("favs/", order.views.favs, name='favs')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

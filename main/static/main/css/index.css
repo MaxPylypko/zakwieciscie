@@ -9,3 +9,8 @@
 .carousel {
     margin-bottom: 20px;
 }
+
+.banner {
+    height: 300px;
+    filter: brightness(30%);
+}

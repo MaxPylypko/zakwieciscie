@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,6 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-href text-white" href="#">Reviews</a>
-                </li>
-                
-                <li class="nav-item">
                     <a class="nav-href text-white" href="{% url 'contacts' %}">Contacts</a>
                 </li>
                 
@@ -47,25 +43,30 @@
             </ul>
         </div>
     
-        <div id="auth-frame" class="d-flex justify-content-center">
-            {% if request.user.is_authenticated %}
-                <img class="icon" src="{% static 'main/img/user.png' %}" alt="User icon">
-                <p class="auth-text">{{request.user.username}}</p>
-            {% else %}
-                <img class="icon" src="{% static 'main/img/enter.png' %}" alt="Enter icon">
-                <a href="{% url 'login' %}" style="text-decoration: none;">
-                    <p class="auth-text">Login or register</p>
-                </a>
-            {% endif %}
-        </div>
+        <div id="user-zone" class="d-flex justify-content-center align-items-center">
+          <div id="auth-frame" class="d-flex justify-content-center">
+              {% if request.user.is_authenticated %}
+                  <img class="icon" src="{% static 'main/img/user.png' %}" alt="User icon">
+                  <p class="auth-text">{{request.user.username}}</p>
+                  <i class="bi bi-bag-fill"></i>
+                  <i class="bi bi-heart-fill"></i>
+              {% else %}
+                  <img class="icon" src="{% static 'main/img/enter.png' %}" alt="Enter icon">
+                  <a href="{% url 'login' %}" style="text-decoration: none;">
+                      <p class="auth-text">Login or register</p>
+                  </a>
+              {% endif %}
+          </div>
+          <div id="icons-block">
+            <img class="icon" src="{% static 'main/img/bag.png' %}" alt="Bag icon">
+            <img class="icon" src="{% static 'main/img/heart.png' %}" alt="Heart icon">
+          </div>
+          
         </div>
     </div>
 
     {% block carousel %}
     {% endblock %}
-
-    <!-- {% block banner %}
-    {% endblock %} -->
 
     <div id="main-wrapper" class="h-100">
         {% block content %}
@@ -123,7 +124,7 @@
 
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-tertiary text-white" style="display: none;">
+    <footer class="text-center text-lg-start bg-tertiary text-white">
 
     <!-- Section: Links  -->
         <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section> -->
@@ -136,11 +137,11 @@
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
                 <!-- Links -->
-                    <h6 class="text-uppercase fw-reset mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
                         Navigation
                     </h6>
                     <p><a href="#!" class="text-decoration-none text-white-50">Main page</a></p>
-                    <p><a href="#!" class="text-decoration-none text-white-50">Reviews</a></p>
+                    <p><a href="#!" class="text-decoration-none text-white-50">Catalog</a></p>
                     <p><a href="#!" class="text-decoration-none text-white-50">Contacts</a></p>
                     <p><a href="#!" class="text-decoration-none text-white-50">FAQ</a></p>
                 </div>
@@ -169,8 +170,8 @@
                         Soc. Networks
                     </h6>
                     <div class="container d-flex flex-row align-items-center">
-                        <p><a href="#!"><img src="{% static 'main/img/facebook.png' %}" class="img-fluid w-50" alt="facebooklogo"></a></p>
-                        <p><a href="#!"><img src="{% static 'main/img/instagram.png' %}" class="img-fluid w-50" alt="instagramlogo"></a></p>
+                        <p><a href="#!"><img src="{% static 'main/img/facebook.png' %}" class="img-fluid w-50" alt="facebook logo"></a></p>
+                        <p><a href="#!"><img src="{% static 'main/img/instagram.png' %}" class="img-fluid w-50" alt="instagram logo"></a></p>
                     </div>
                 </div>
             </div>

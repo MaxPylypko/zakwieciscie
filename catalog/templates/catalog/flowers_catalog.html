@@ -5,11 +5,9 @@
     <link rel="stylesheet" href="{% static 'catalog/css/catalog.css' %}">
 {% endblock %}
 
-{% block carousel %}
-  <img class="Flowers-catalog-banner w-100" src="{% static 'catalog/img/flowers_banner.png' %}" alt="Flowers catalog banner">
-{% endblock %}
 
 {% block content %}
+  <img class="w-100" id="flowers-catalog-banner" src="{% static 'catalog/img/banner.png' %}" alt="Flowers catalog banner">
 <!-- Filters seciton -->
   <div id="filters">
     <!-- Wrapper for corectly working space-between -->
@@ -45,140 +43,24 @@
   </div>
 
   <div id="items">
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
+    
+    {% for flower in flowers %}
+      <div class="card">
+        <div id="img-wrapper" style="background-image: url({{flower.img.url}});">
+          <div id="actions-wrapper">
+              <a href="{% url 'add_to_cart' item_id=flower.id %}" style="text-decoration: none;">
+                <button class="action-btn">Add to cart<i class="bi bi-cart2"></i></button>
+              </a>
+            <button class="action-btn">Add to favorites <i class="bi bi-heart-fill"></i></button>
+          </div>
+        </div>
 
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
+        <div class="card-body">
+          <h5 class="card-title">{{flower.name}}</h5>
+          <p class="card-text">{{flower.description}}</p>
+          <p class="price-text">{{flower.price}} zl</p>
+        </div>
       </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-fluid" src="{% static 'catalog/img/item.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Flowers</h5>
-        <p class="card-text">Lorem ipsum</p>
-        <p class="price-text">15 zl</p>
-      </div>
-    </div>
-
+    {% endfor %}
   </div>
 {% endblock %}

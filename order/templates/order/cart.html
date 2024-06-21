@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block head %}
+    <title>Cart</title>
+{% endblock %}
+
+
+
+{% block content %}
+    {% for item in cart_items %}
+        <div>
+            <p style="color: white;">Name: {{item.name}}</p>
+            <p style="color: white;">Description: {{item.description}}</p>
+            <p style="color: white;">Price: {{item.price}} zl</p>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
