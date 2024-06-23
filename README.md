@@ -29,12 +29,13 @@
 ## Команда
 
 - Пилипко Максим/Pylypko Maksym - лідер команди (Teamlead)
-- Гончаров Єгор/Honcharov Yehor - розробник (Full-Stack Developer)
-- Киприч Таїсія/Kyprych Taisiia - розробник (Full-Stack Developer)
+[GitHub](https://github.com/MaxPylypko) [Figma](https://www.figma.com/@7683301f_66d3_4)
 
-- Pylypko Maksym: - [GitHub](https://github.com/MaxPylypko) [Figma](https://www.figma.com/@7683301f_66d3_4)
-- Honcharov Yehor - [GitHub](https://github.com/YehorHoncharov) [Figma](https://www.figma.com/@d4a8c8c6_69dd_4)
-- Kyprych Taisiia - [GitHub](https://github.com/Taisiia773) [Figma](https://www.figma.com/@taisiiakiprych)
+- Гончаров Єгор/Honcharov Yehor - розробник (Full-Stack Developer)
+[GitHub](https://github.com/YehorHoncharov) [Figma](https://www.figma.com/@d4a8c8c6_69dd_4)
+
+- Киприч Таїсія/Kyprych Taisiia - розробник (Full-Stack Developer)
+[GitHub](https://github.com/Taisiia773) [Figma](https://www.figma.com/@taisiiakiprych)
 
 ## Вклад учасників
 
