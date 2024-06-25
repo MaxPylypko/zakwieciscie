@@ -1,45 +1,41 @@
-# "Zakwieciscie" онлайн-крамниця квітів
+# "Zakwieciscie" польська онлайн-крамниця квітів
 
 ## Опис проекту
 
-Цей проект представляє собою квітковий інтернет-магазин, де користувачі можуть переглядати, замовляти та купувати різні види квітів і квіткових композицій. Магазин надає зручний інтерфейс для користувачів, а також адміністративну панель для управління товарами, замовленнями та користувачами.
+Цей проект представляє собою інтернет-магазин різноманітних товарів (в основному квітів), де користувачі можуть їх переглядати, замовляти та купувати. Магазин надає зручний інтерфейс для користувачів, а також адміністративну панель для управління товарами, замовленнями та користувачами.
 
 ## Функціональність
 
 ### Для користувачів:
-- Перегляд каталогу квітів
-- Пошук квітів за категоріями та фільтрами
-- Перегляд деталей квітки (опис, ціна, фотографії)
-- Додавання квітів у кошик
+- Перегляд каталогу товарів
+- Пошук товарів за категоріями та фільтрами
+- Перегляд деталей товару (опис, ціна, фотографії)
+- Зручний кошик
 - Оформлення замовлення
 - Реєстрація та авторизація
 
 ### Для адміністраторів:
-- Управління каталогом квітів (додавання, редагування, видалення)
+- Управління каталогом товарів (додавання, редагування, видалення)
 - Управління замовленнями (перегляд, оновлення статусів)
 - Управління користувачами (перегляд, блокування/розблокування)
 
 ## Структура проекту
 
 - zakwieciscie/ - головний проект Django
-- main/ - головний додаток
-- authorise/ - додаток для управління користувачами та автентифікації
-- templates/ - HTML-шаблони для фронтенду
-- static/ - статичні файли (CSS, JS, зображення)
+- authorize/ - додаток для управління користувачами та автентифікації
 - catalog/ - додаток з товарами (каталог)
 - contacts/ - додаток з контактами замовників
 
 ## Команда
 
 - Пилипко Максим/Pylypko Maksym - лідер команди (Teamlead)
+[GitHub](https://github.com/MaxPylypko) [Figma](https://www.figma.com/@7683301f_66d3_4)
+
 - Гончаров Єгор/Honcharov Yehor - розробник (Full-Stack Developer)
-- Киприч Таїсія/Kyprych Taisiia - дизайнер (Full-Stack Developer)
+[GitHub](https://github.com/YehorHoncharov) [Figma](https://www.figma.com/@d4a8c8c6_69dd_4)
 
-## GitHub команди
-
-- Пилипко Максим/Pylypko Maksym - [GitHub](https://github.com/MaxPylypko)
-- Гончаров Єгор/Honcharov Yehor - [GitHub](https://github.com/YehorHoncharov)
-- Киприч Таїсія/Kyprych Taisiia - [GitHub](https://github.com/Taisiia773)
+- Киприч Таїсія/Kyprych Taisiia - розробник (Full-Stack Developer)
+[GitHub](https://github.com/Taisiia773) [Figma](https://www.figma.com/@taisiiakiprych)
 
 ## Вклад учасників
 
@@ -50,12 +46,6 @@
 5. Розробка візуального стилю та дизайну сайту.
 6. Створення макетів сторінок та графічних елементів.
 7. Наповнення сайту текстами, фото та відео.
-
-### Дизайнери
-- Гончаров Єгор/Honcharov Yehor і Киприч Таїсія/Kyprych Taisiia: створили візуальний дизайн сайту, включаючи макети сторінок та графічні елементи.
-
-### Менеджер проекту
-- Пилипко Максим/Pylypko Maksym: координував роботу команди, забезпечував дотримання термінів та якість виконання задач.
 
 ## Використані технології
 
@@ -68,69 +58,60 @@
 
 ---
 
-# "Zakwieciscie" online flower-store
+## "Zakwieciscie" Polish online flower shop
 
-## Project Description
+## Project description.
 
-This project is a flower e-commerce store where users can browse, order, and purchase various types of flowers and floral arrangements. The store provides a user-friendly interface for customers as well as an admin panel for managing products, orders, and users.
+This project is an online store of various goods (mainly flowers) where users can browse, order and buy them. The store provides a user-friendly interface for users, as well as an administrative panel for managing products, orders, and users.
 
-## Features
+## Functionality.
 
-### For Users:
-- View flower catalog
-- Search flowers by categories and filters
-- View flower details (description, price, photos)
-- Add flowers to cart
-- Place orders
-- Registration and login
+### For users:
+- Viewing the product catalog
+- Search for products by categories and filters
+- View product details (description, price, photos)
+- Convenient shopping cart
+- Checkout of the order
+- Registration and authorization.
 
-### For Administrators:
-- Manage flower catalog (add, edit, delete)
-- Manage orders (view, update statuses)
-- Manage users (view, block/unblock)
+### For administrators:
+- Product catalog management (add, edit, delete)
+- Order management (viewing, updating statuses)
+- User management (view, block/unblock)
 
-## Project Structure
+## Project structure
 
-- zakwieciscie/ - main Django project
-- main/ - main application
-- authorise/ - application for user management and authentication
-- templates/ - HTML templates for frontend
-- static/ - static files (CSS, JS, images)
-- catalog/ - application for products (catalog)
-- contacts/ - application for customer contacts
+- zakwieciscie/ - the main Django project
+- authorize/ - application for user management and authentication
+- catalog/ - application with goods (catalog)
+- contacts/ - application with customer contacts
 
 ## Team
 
 - Pylypko Maksym - Team Lead
-- Honcharov Yehor - Full-Stack Developer
-- Kyprych Taisiia - Full-Stack Developer
+- Honcharov Yehor - Developer (Full-Stack Developer)
+- Kyprych Taisiia - Developer (Full-Stack Developer)
 
-## Team GitHub
+- Pylypko Maksym: - [GitHub](https://github.com/MaxPylypko) [Figma](https://www.figma.com/@7683301f_66d3_4)
+- Honcharov Yehor - [GitHub](https://github.com/YehorHoncharov) [Figma](https://www.figma.com/@d4a8c8c6_69dd_4)
+- Kyprych Taisiia - [GitHub](https://github.com/Taisiia773) [Figma](https://www.figma.com/@taisiiakiprych)
 
-- Pylypko Maksym - [GitHub](https://github.com/MaxPylypko)
-- Honcharov Yehor - [GitHub](https://github.com/YehorHoncharov)
-- Kyprych Taisiia - [GitHub](https://github.com/Taisiia773)
+## Contribution of participants
 
-## Contribution of Team Members
-
-1. Planning and task management.
-2. Communication with clients and suppliers.
-3. Website creation and maintenance.
+1. Planning and control of tasks.
+2. Communication with customers and suppliers.
+3. Creating and maintaining a website.
 4. Development of store functionality.
-5. Visual style and design of the site.
+5. Development of visual style and design of the site.
 6. Creation of page layouts and graphic elements.
-7. Content creation (texts, photos, and videos).
+7. Filling the site with texts, photos and videos.
 
-### Designers
-- Honcharov Yehor and Kyprych Taisiia: Created the visual design of the site, including page layouts and graphic elements.
+## Technologies used
 
-### Project Manager
-- Pylypko Maksym: Coordinated the team's work, ensured deadlines were met, and maintained the quality of tasks.
+- Django: the main web framework for application development.
+- PostgreSQL: database for storing information about products, orders, and users.
+- HTML/CSS: for creating and styling the user interface.
+- JavaScript: to improve user experience and dynamic content.
+- Bootstrap: CSS framework for creating responsive design.
+- Figma: A web-based tool for developing project design.
 
-## Technologies Used
-
-- Django: Main web framework for application development.
-- PostgreSQL: Database for storing information about products, orders, and users.
-- HTML/CSS: For creating and styling the user interface.
-- JavaScript: For enhancing user interaction and dynamic content.
-- Bootstrap: CSS framework for creating a responsive design.
