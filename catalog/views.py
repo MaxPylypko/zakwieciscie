@@ -4,8 +4,11 @@ from .models import *
 
 
 # Create your views here.
-def item(request: HttpRequest) -> HttpResponse:
-    return render(request, "catalog/item.html")
+def item(request: HttpRequest, item_id: str) -> HttpResponse:
+    print(type(item_id))
+    flower = Flower.objects.get(id=item_id)
+    
+    return render(request, "catalog/item.html", {"flower": flower})
 
 def flowers_catalog(request: HttpRequest) -> HttpResponse:
     context = {}

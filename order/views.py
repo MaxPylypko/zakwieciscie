@@ -10,5 +10,5 @@ def cart(request: HttpRequest):
     try:
         cart_items = (Flower.objects.get(id=item_id) for item_id in items_id) 
     except:
-        return render(request, 'main/index.html')
+        return render(request, 'order/cart.html')
     return render(request, "order/cart.html", {'cart_items': cart_items})

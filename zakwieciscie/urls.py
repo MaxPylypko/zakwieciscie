@@ -35,7 +35,7 @@ urlpatterns = [
     path("login/", authorize.views.log_in, name='login'),
     
     path("flowers/", catalog.views.flowers_catalog, name='flowers_catalog'),
-    path("item/", catalog.views.item, name='item'),
+    path("item/<int:item_id>", catalog.views.item, name='item'),
     path("add_to_cart/<int:item_id>", catalog.views.add_to_cart, name="add_to_cart"),
     path("add_to_favs/<int:item_id>", catalog.views.add_to_favs, name="add_to_favs"),
     

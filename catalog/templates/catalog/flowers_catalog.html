@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'catalog/css/catalog.css' %}">
+  <link rel="stylesheet" href="{% static 'catalog/css/catalog.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 {% endblock %}
 
 
@@ -43,7 +44,6 @@
   </div>
 
   <div id="items">
-    
     {% for flower in flowers %}
       <div class="card">
         <div id="img-wrapper" style="background-image: url({{flower.img.url}});">
@@ -56,7 +56,7 @@
         </div>
 
         <div class="card-body">
-          <h5 class="card-title">{{flower.name}}</h5>
+          <a href="{% url 'item' item_id=flower.id %}"><h5 class="card-title">{{flower.name}}</h5></a>
           <p class="card-text">{{flower.description}}</p>
           <p class="price-text">{{flower.price}} zl</p>
         </div>
