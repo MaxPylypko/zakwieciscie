@@ -1,47 +1,40 @@
 {% extends 'main/base.html' %}
-{% block head %}
-    <title>Cart</title>
-    <style>
-        #main-wrapper {
-            display: flex;
-            height: 100%;
-            /* border: 1px solid white; */
-            flex-direction: column;
-        }
+{% load static %}
 
-        p {
-            margin: 0px;
-        }
-    </style>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'order/css/cart.css' %}">
 {% endblock %}
 
 {% block content %}
-<div id="cart-wrapper" class="w-100 h-100 d-flex">
-    <div id="items-wrapper" class="w-50 overflow-auto d-flex flex-column">
-        {% for item in cart_items %}
-            <div style='background-color: #241A19;' class="d-flex align-items-center w-100">
-                <img src="{{item.img.url}}" style="height: 100px; width: 100px;" alt="Image of item">
-                <div id="item-wrapper" class="d-flex flex-column h-100 justify-content-between" style="margin-left: 20px">
-                    <div id="item-text-wrapper d-flex flex-column h-100" style="margin-bottom: 20px">
-                        <p class="text-white fw-medium">{{item.name}}</p>
-                        <p class="text-white-50">{{item.description}}</p>
-                    </div>
-                    <p style="color: white;">{{item.price}} zl</p>
-                </div>
-            </div>
-            <br>
+<div class="container mt-5">
+    <h1 class="mb-4">Shopping Cart</h1>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Image</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for cart_item in cart_items %}
+            <tr>
+            <td>Beautiful Rose</td>
+            <td>
+                <img src="{{cart_item.img.url}}" class="img-fluid h-25 w-25 cart-image" alt="Flower Image">
+            </td>
+            <td>
+                <input type="number" class="form-control" value="1" min="1">
+            </td>
+            <td>{{cart_item.price}} zl</td>
+            </tr>
         {% endfor %}
-    </div>
-    <div class="w-75 d-flex justify-content-center align-items-center" style="background-color: #8A3033;">
-        <form method="POST" class="d-flex flex-column" style="gap: 30px">
-            <div class="form-group">
-                <label for="first-name" class="text-white">First name</label>
-                <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Enter first name">
-                <label for="last-name" class="text-white">Last name</label>
-                <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Enter last name">
-            </div>
-            <button class="btn" style="background-color: pink;">Create order</button>
-        </form>
+      </tbody>
+    </table>
+    <div class="text-right">
+      <!-- <h4>Subtotal: $15.99</h4> -->
+      <button class="btn btn-primary">Checkout</button>
     </div>
 </div>
 {% endblock %}

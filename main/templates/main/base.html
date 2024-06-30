@@ -4,173 +4,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakwieciscie</title>
     
-    <!-- Bootstrap & CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');</style>
+
+    <style>
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+    </style>
+
     {% block head %}
     {% endblock %}
 </head>
 
-<body class="d-flex flex-column vh-100 align-items-center">
-    <div id="header-content" class="navbar navbar-expand-lg d-flex justify-content-between">
-
-      <a href="{% url 'main' %}">
-          <img id="logo" src="{% static 'main/img/logo.png' %}" alt="Picture of logo">
-      </a>
-
-        <div class="d-flex align-items-center">
-            <ul class="navbar-nav d-flex justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-href text-white" href="{% url 'flowers_catalog' %}">Catalog</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-href text-white" href="{% url 'contacts' %}">Contacts</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-href text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">FAQ</a>
-                </li>
-            </ul>
-        </div>
-    
-        <div id="user-zone" class="d-flex justify-content-center align-items-center">
-          <div id="auth-frame" class="d-flex justify-content-center">
-              {% if request.user.is_authenticated %}
-                  <img class="icon" src="{% static 'main/img/user.png' %}" alt="User icon">
-                  <p class="auth-text">{{request.user.username}}</p>
-              {% else %}
-                  <img class="icon" src="{% static 'main/img/enter.png' %}" alt="Enter icon">
-                  <a href="{% url 'login' %}" style="text-decoration: none;">
-                      <p class="auth-text">Login or register</p>
-                  </a>
-              {% endif %}
-          </div>
-          <div id="icons-block">
-            <a href="{% url 'cart' %}"><img class="icon" src="{% static 'main/img/bag.png' %}" alt="Bag icon"></a>
-            <img class="icon" src="{% static 'main/img/heart.png' %}" alt="Heart icon">
-          </div>
-          
-        </div>
-    </div>
-
-    {% block carousel %}
-    {% endblock %}
-
-    <div id="main-wrapper" class="h-100">
-      {% block content %}
-      {% endblock %}
-      <!-- Footer -->
-    <footer class="text-center text-lg-start bg-tertiary text-white">
-
-      <!-- Section: Links  -->
-          <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section> -->
-          
-          <section>
-              <div class="text-center text-md-start mt-5">
-              <!-- Grid row -->
-              <div class="row mt-3">
-  
-                  <!-- Grid column -->
-                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
-                  <!-- Links -->
-                      <h6 class="text-uppercase fw-bold mb-4">
-                          Navigation
-                      </h6>
-                      <p><a href="#!" class="text-decoration-none text-white-50">Main page</a></p>
-                      <p><a href="#!" class="text-decoration-none text-white-50">Catalog</a></p>
-                      <p><a href="#!" class="text-decoration-none text-white-50">Contacts</a></p>
-                      <p><a href="#!" class="text-decoration-none text-white-50">FAQ</a></p>
-                  </div>
-  
-                  <!-- Grid column -->
-                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                      <!-- Content -->
-                          <h6 class="text-uppercase fw-bold mb-4">Visit us in Ostrów Wielkopolski </h6>
-                          <p class="text-decoration-none text-white-50">ul. Ceglana 2a (przy ulicy Zębcowskiej) 63-400 Ostrów Wielkopolski Woj. Wielkopolskie</p>
-                      </div>
-  
-                  <!-- Grid column -->
-                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
-                      <!-- Links -->
-                      <h6 class="text-uppercase fw-bold mb-4">
-                          Contacts
-                      </h6>
-                      <p class="text-white-50">zakwieciscie@wp.pl</p>
-                      <p class="text-white-50">+48 733 160 170</p>
-                  </div>
-  
-                  <!-- Grid column -->
-                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
-                  <!-- Links -->
-                      <h6 class="text-uppercase fw-bold mb-4">
-                          Soc. Networks
-                      </h6>
-                      <div class="container d-flex flex-row align-items-center">
-                          <p><a href="#!"><img src="{% static 'main/img/facebook.png' %}" class="img-fluid w-50" alt="facebook logo"></a></p>
-                          <p><a href="#!"><img src="{% static 'main/img/instagram.png' %}" class="img-fluid w-50" alt="instagram logo"></a></p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-      </footer>
-
-        <!-- MODAL OPEN -->
-      <div class="modal fade modal-right" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered d-flex align-items-xxl-stretch modal-right" style="left: 34%;">
-          <div class="modal-content ">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-      <!-- MODAL CLOSE -->
-      <!-- ACCORDEON OPEN -->
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Question 1
-                      </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Answer 1</div>
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'main' %}">
+                    <img id="logo" src="{% static 'main/img/logo.png' %}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link link-light" data-bs-toggle="dropdown" aria-expanded="false" href="#">Catalog</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'flowers_catalog' %}">Flowers</a></li>
+                                <li><a class="dropdown-item" href="#">Candles</a></li>
+                                <li><a class="dropdown-item" href="#">Other stuff</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="{% url 'contacts' %}">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" data-bs-toggle="modal" data-bs-target="#faqModal" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                    <div class="right-section ms-auto d-flex align-items-center">
+                        <div class="me-3">
+                            {% if request.user.is_authenticated %}
+                                <div class="auth-div d-flex align-items-center justify-content-center">
+                                    <p>{{ request.user.username }}</p>
+                                </div>
+                            {% else %}
+                                <a href="{% url 'login' %}" class="text-decoration-none text-white">
+                                    <div class="auth-div d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                        <p>Login or register</p>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div id="icons-block">
+                            <a href="{% url 'cart' %}"><i style="color: pink" class="bi bi-bag"></i></a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Question 2
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Answer 2</div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Question 3
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Answer 3</div>
-                    </div>
-                  </div>
                 </div>
             </div>
-          </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        {% block carousel %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+          <footer class="text-center text-lg-start bg-tertiary text-white">
+            <section>
+                <div class="text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                            <h6 class="text-uppercase fw-bold mb-4">Navigation</h6>
+                            <p><a href="{% url 'main' %}" class="text-decoration-none text-white-50">Main page</a></p>
+                            <p><a href="#" class="text-decoration-none text-white-50">Catalog</a></p>
+                            <p><a href="{% url 'contacts' %}" class="text-decoration-none text-white-50">Contacts</a></p>
+                            <p><a href="#" class="text-decoration-none text-white-50" data-bs-toggle="modal" data-bs-target="#faqModal">FAQ</a></p>
+                        </div>
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Visit us in Ostrów Wielkopolski</h6>
+                            <p class="text-decoration-none text-white-50">ul. Ceglana 2a (przy ulicy Zębcowskiej) 63-400 Ostrów Wielkopolski Woj. Wielkopolskie</p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
+                            <h6 class="text-uppercase fw-bold mb-4">Contacts</h6>
+                            <p class="text-white-50">zakwieciscie@wp.pl</p>
+                            <p class="text-white-50">+48 733 160 170</p>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
+                            <h6 class="text-uppercase fw-bold mb-4">Social Networks</h6>
+                            <div class="container d-flex flex-row justify-content-center">
+                                <i class="bi mx-3 bi-facebook"></i>
+                                <i class="bi mx-3 bi-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+          </footer>
+    </main>
+
+
+
+    <!-- FAQ Modal -->
+    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="faqModalLabel">FAQ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                    Question 1
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Answer 1</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    Question 2
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Answer 2</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    Question 3
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Answer 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
 </body>
 </html>

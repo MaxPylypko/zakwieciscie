@@ -5,141 +5,20 @@
   <link rel="stylesheet" href="{% static 'catalog/css/item.css' %}">
 {% endblock %}
 
-
 {% block content %}
-<!-- Heading -->
-<div class="container">
-    <!-- Breadcrumb -->
-    <h6 class="mb-0">
-        <a href="#" class="text-white-50">Home</a>
-        <span class="text-white-50 mx-2"> > </span>
-        <a href="#" class="text-white-50">Catalog</a>
-        <span class="text-white-50 mx-2"> > </span>
-        <a href="#" class="text-white"><u>Product</u></a>
-    </h6>
-    <!-- Breadcrumb -->
-</div>
-
-
-  <!-- content -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row gx-5">
-        <aside class="col-lg-6">
-          <div class="mb-3">
-              <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'catalog/img/item1.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'catalog/img/item1.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{{flower.img.url}}" class="d-block w-100 h" alt="Item picture">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- <div class="d-flex justify-content-center mb-3">
-            <ol class="flex-control-nav flex-control-thumbs">
-              <li>
-                <img src="{% static 'catalog/img/item1.jpg' %}" class="d-block w-100" draggable="false">
-              </li>
-              <li>
-                <img src="{% static 'catalog/img/item1.jpg' %}" class="d-block w-100" draggable="false">
-              </li>
-              <li>
-                <img src="{% static 'catalog/img/item1.jpg' %}" class="d-block w-100" draggable="false">
-              </li>
-            </ol>
-          </div> -->
-
-          <!-- thumbs-wrap.// -->
-          <!-- gallery-wrap .end// -->
-        </aside>
-        <main class="col-lg-6">
-          <div class="ps-lg-3">
-            <h4 class="title">{{flower.name}}</h4>
-            <p class="text-white-50">{{flower.description}}</p>
-  
-            <div class="mb-3">
-              <span class="h2">{{flower.price}} zl</span>
-            </div>
-
-            <hr>
-
-            <div class="colors">
-                <p>Color:</p>
-                <button type="button" class="btn" id="button_choise_color0"></button>
-                <button type="button" class="btn" id="button_choise_color1"></button>
-                <button type="button" class="btn" id="button_choise_color2"></button>
-                <button type="button" class="btn" id="button_choise_color3"></button>
-
-            </div>
-
-            <hr>
-
-            <div class="size  justify-content-between">
-              <p>Size:</p>
-              <a href="#" class="btn text-white"> S </a>
-              <a href="#" class="btn text-white"> M </a>
-              <a href="#" class="btn text-white"> L </a>
-            </div>
-
-            <hr>
-            
-              <!-- col.// -->
-              <div class="col-md-4 col-6 mb-3">
-                <label class="mb-2 d-block">Quantity</label>
-                <div class="input-group mb-3" style="width: 170px;">
-                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                    <i class="fas fa-minus">-</i>
-                  </button>
-                  <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                    <i class="fas fa-plus">+</i>
-                  </button>
-                </div>
-              </div>
-
-
-            <button href="#" id="buy_btn" class="btn rounded-4"> Buy and pay </button>
-            <button href="#" class="btn border border-secondar text-white rounded-4"> Add to cart <img class="img-card-like" src="{% static 'catalog/img/card.png' %}" alt="cardimg"></button>
-            <a href="#" class="btn"> <img class="img-card-like" src="{% static 'catalog/img/save.png' %}" alt="saveimg"> </a>
-
-
-            <!-- <div class="text">
-                <h4>Text</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iste odio, quas aliquam modi esse quisquam adipisci saepe facilis neque quo repellat asperiores quam alias praesentium, accusamus consequuntur provident nam.</p>
-            </div> -->
-          </div>
-        </main>
-        <div class="text-info">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iste odio, quas aliquam modi esse quisquam adipisci saepe facilis neque quo repellat asperiores quam alias praesentium, accusamus consequuntur provident nam.</p>
-          <p>Lioutydv:</p>
-          <p>-Iste odio, quas aliquam modi esse quisquam</p>
-          <p>-Quisquam adipisci saepe facilis neque</p>
-          <p>-Facilis neque quo repellat asperiores quam alias praesentium</p>
-        </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{flower.img.url}}" class="img-fluid" alt="Flower Image">
+      </div>
+      <div class="col-md-6">
+        <h1>Beautiful Rose</h1>
+        <p class="price">{{flower.price}} zl</p>
+        <p class="description">
+          {{flower.description}}
+        </p>
+        <button class="action-btn">Add to cart<i class="bi bi-cart2"></i></button>
       </div>
     </div>
-  </section>
-  <!-- content -->
-
-
+  </div>
 {% endblock %}
